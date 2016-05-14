@@ -1,0 +1,22 @@
+{
+  "name": "who-pays-next",
+  "version": "1.0.0",
+  "description": "App that is used to figure out who pays next",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcodonnell/who-pays-next.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rcodonnell/who-pays-next/issues"
+  },
+  "homepage": "https://github.com/rcodonnell/who-pays-next#readme",
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}
