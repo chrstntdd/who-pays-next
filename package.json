@@ -1,7 +1,7 @@
 {
   "name": "who-pays-next",
   "version": "1.0.0",
-  "description": "App that is used to figure out who pays next",
+  "description": "App to show who pays next",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/rcodonnell/who-pays-next#readme",
   "dependencies": {
-    "angular": "^1.5.5"
+    "angular": "^1.5.5",
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
   }
 }
