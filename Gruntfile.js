@@ -16,15 +16,6 @@ module.exports = function(grunt) {
         //         }
         //     }
         // },
-        connect: {
-            server: {
-                options: {
-                    port: 8080,
-                    keepalive: true,
-                    livereload: true
-                }
-            }
-        },
         // TODO : Later
         // watch: {
         //     options: {
@@ -38,12 +29,24 @@ module.exports = function(grunt) {
         //         files: ['**/*.html']
         //     }
         // }
+        webpack: {
+            build: {
+                entry: './src/js',
+                output: {
+                    path: 'dist/js',
+                    filename: 'main.js'
+                },
+                watch: true,
+                keepalive: true
+            }
+        }
     });
 
+    grunt.loadNpmTasks('grunt-webpack');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('default', ['sass', 'watch']);
+    // grunt.registerTask('default', ['sass', 'watch']);
+    grunt.registerTask('default', ['webpack']);
     grunt.registerTask('server', ['connect']);
 };
