@@ -1,43 +1,22 @@
 'use strict';
 
+var webpack = require('webpack');
+
 module.exports = function(grunt) {
     grunt.initConfig({
-        // TODO : Later
-        // sass: {
-        //     dist: {
-        //         files: {
-        //             'css/normalize.css' : 'sass/normalize.scss',
-        //             'css/style.css' : 'sass/style.scss'
-        //         },
-        //         options: {
-        //             style: 'expanded',
-        //             noCache: true,
-        //             sourcemap: 'none'
-        //         }
-        //     }
-        // },
-        // TODO : Later
-        // watch: {
-        //     options: {
-        //         livereload: true
-        //     },
-        //     sass: {
-        //         files: ['sass/**/*.scss'],
-        //         tasks: ['sass'],
-        //     },
-        //     html: {
-        //         files: ['**/*.html']
-        //     }
-        // }
         webpack: {
             build: {
-                entry: './src/js',
+                context: __dirname + '/src',
+                entry: './js',
                 output: {
-                    path: 'dist/js',
+                    path: __dirname + 'dist/js',
                     filename: 'main.js'
                 },
                 watch: true,
-                keepalive: true
+                keepalive: true,
+                plugins: [new webpack.optimize.UglifyJsPlugin({
+                    mangle: false
+                })]
             }
         }
     });
