@@ -10,5 +10,5 @@ Angular 2
 ### Run Application
 Use the command
 ```
-ng serve
+npm start
 ```
