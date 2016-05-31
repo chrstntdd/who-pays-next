@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Routes, ROUTER_DIRECTIVES } from '@angular/router';
 
+import { PayComponent } from './pay.component'
 import { TestComponent } from './test.component'
+
 @Component({
     selector: 'my-app',
     template: `
@@ -15,6 +17,7 @@ import { TestComponent } from './test.component'
     directives: [ROUTER_DIRECTIVES]
 })
 @Routes([
+    {path: '/', component: PayComponent},
     {path: '/test', component: TestComponent}
 ])
 export class AppComponent { }
