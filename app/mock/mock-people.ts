@@ -1,7 +1,7 @@
 import { Person } from './person';
 
 export var PEOPLE: Person[] = [
-   { "id": 11, "name": "Mr. Nice" },
+   { "id": 11, "name": "The Reyco" },
    { "id": 12, "name": "Narco" },
    { "id": 13, "name": "Bombasto" },
    { "id": 14, "name": "Celeritas" },
