@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Routes, ROUTER_DIRECTIVES } from '@angular/router';
 
-import { PayComponent } from './pay.component'
+import { PeopleComponent } from './components/people.component'
 import { TestComponent } from './test.component'
 
 @Component({
     selector: 'my-app',
     template: `
-        <h1>My First Angular 2 App</h1>
+        <h1>{{title}}</h1>
         <nav>
             <a [routerLink]="['/']">home</a>
             <a [routerLink]="['/test']">test</a>
@@ -17,7 +17,9 @@ import { TestComponent } from './test.component'
     directives: [ROUTER_DIRECTIVES]
 })
 @Routes([
-    {path: '/', component: PayComponent},
+    {path: '/', component: PeopleComponent},
     {path: '/test', component: TestComponent}
 ])
-export class AppComponent { }
+export class AppComponent {
+    title = 'Who Pays Next';
+}
