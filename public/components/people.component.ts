@@ -6,7 +6,7 @@ import { PeopleService } from '../services/people.service';
 
 @Component({
     selector: 'people-list',
-    templateUrl: 'app/components/people.component.html',
+    templateUrl: 'public/components/people.component.html',
     providers: [
         PeopleService
     ]
