@@ -6,7 +6,7 @@ import { PeopleService } from '../services/people.service';
 
 @Component({
     selector: 'people-list',
-    templateUrl: 'public/components/people.component.html',
+    templateUrl: '/client/scripts/components/people.component.html',
     providers: [
         PeopleService
     ]
@@ -17,6 +17,7 @@ export class PeopleComponent implements OnInit {
     constructor (private peopleService: PeopleService) { }
 
     getPeople() {
+        console.log('test');
         this.peopleService.getPeople()
             .then(people => this.people = people)
             .catch(error => console.error(error));
