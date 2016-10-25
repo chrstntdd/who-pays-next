@@ -11,7 +11,8 @@
     "tsc:w": "tsc -w",
     "typings": "typings",
     "html": "find ./client/scripts -name '*.html' -exec cp --parents \\{\\} ./dist \\;",
-    "test": "./node_modules/tslint/bin/tslint main.ts"
+    "test": "./node_modules/tslint/bin/tslint main.ts",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -42,9 +43,12 @@
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
+    "awesome-typescript-loader": "^2.2.4",
     "concurrently": "^3.0.0",
+    "html-webpack-plugin": "^2.24.0",
     "lite-server": "^2.2.2",
     "typescript": "^2.0.3",
-    "typings":"^1.4.0"
+    "typings": "^1.4.0",
+    "webpack": "^1.13.2"
   }
 }
