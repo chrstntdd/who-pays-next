@@ -39,7 +39,7 @@ server.register([require('vision'), require('inert')], (err) => {
 
     server.route({
         method: 'GET',
-        path: '/',
+        path: '/{param*}',
         handler: function (request, reply) {
 
             return reply.view('index.html.hbs');

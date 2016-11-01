@@ -24,7 +24,12 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                // include: './client',
+                exclude: path.join(__dirname, 'client', 'scripts'),
+                loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+            },
+            {
+                test: /\.css$/,
+                include: path.join(__dirname, 'client', 'scripts'),
                 loader: 'raw'
             }
         ]
@@ -36,11 +41,11 @@ module.exports = {
 
 
     entry: {
-        'main' : './client/main.ts',
+        'main' : path.join(__dirname, 'client', 'scripts', 'main.ts'),
     },
 
     output: {
-        path: './dist/js',
+        path: path.join(__dirname, 'dist', 'js'),
         filename: '[name].js',
         chunkFilename: '[id].chunk.js'
     },
