@@ -1,4 +1,4 @@
-# Who pays next application [![Build Status](https://travis-ci.org/rcodonnell/who-pays-next.svg?branch=master)](https://travis-ci.org/rcodonnell/who-pays-next)
+# Who pays next application [![Build Status](https://travis-ci.org/ConsultingBuddies/who-pays-next.svg?branch=master)](https://travis-ci.org/ConsultingBuddies/who-pays-next)
 --------------------------
 
 Application that is use to determine who pays next
