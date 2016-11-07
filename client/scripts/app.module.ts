@@ -1,15 +1,13 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-
-import {AppRoutingModule} from './app-routing.module';
+import {RouterModule} from '@angular/router';
 
 import {AppComponent} from './app.component';
-import {HeroDetailComponent} from './hero-detail.component';
-import {HeroesComponent} from './heroes.component';
-import {HeroService} from './hero.service';
-import {DashboardComponent} from './dashboard.component';
+import {routes} from './app.routes';
+
+import {DashboardModule} from './dashboard/dashboard.module';
+
 
 /**
  * Entry point to application.
@@ -17,17 +15,14 @@ import {DashboardComponent} from './dashboard.component';
 @NgModule({
     imports: [
         BrowserModule,
-        FormsModule,
+        RouterModule.forRoot(routes),
         HttpModule,
-        AppRoutingModule
+        DashboardModule
     ],
     declarations: [
         AppComponent,
-        HeroDetailComponent,
-        HeroesComponent,
-        DashboardComponent
     ],
-    providers: [HeroService],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
