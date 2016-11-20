@@ -13,18 +13,41 @@ The future of the application.
 
 
 ### Built Using
----------------
+---
 * Angular 2
 * HapiJS
 * NodeJS v6
+* Webpack
 
-### Run Application
-Use the command
+### Getting Started
+---
 
-Development
+Install the dependencies and bundle by running these command in your terminal / command line.
 
 ```
-npm watch
+yarn install
+webpack
 ```
 
+or
+
+```
+npm install
+weback
+```
+
+
+### Running The Application
+---
+
+Start the server with this command.
+```
+npm start
+```
+
+For active development.
+ ```
+ npm watch
+ ``` 
+ 
 Then navigate to [http://localhost:3000/](http://localhost:3000/) in your browser.
