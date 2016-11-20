@@ -28,9 +28,10 @@ module.exports = {
                 loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
             },
             {
-                test: /\.css$/,
+                test: /\.scss$/,  
+                exclude: /nodemodules/,    
                 include: path.join(__dirname, 'client', 'scripts'),
-                loader: 'raw'
+                loaders: ['raw-loader', 'sass-loader']
             }
         ]
     },
